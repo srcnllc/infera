@@ -1,0 +1,68 @@
+@import '../../styles/base/func';
+
+.navMenu {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: max-content;
+      display: flex;
+      gap: size(15);
+      .checkList{
+        li{
+          label{
+            display: flex;
+            align-items: center;
+            gap: size(10);
+          }
+        }
+      }
+      li {
+        position: relative;
+        button {
+          background: rgb(177, 175, 175);
+          color: var(--black);
+          border-radius: size(15);
+          border: 1px solid var(--black);
+          padding: size(5) size(15);
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+          font-size: size(14);
+          font-weight: 500;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #fff;
+          }
+        }
+
+        ul {
+          position: absolute;
+          top: 100%;
+          list-style: none;
+          // padding: size(5) size(0);
+          margin: 5px 0 0 0;
+          background-color: #fff;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          gap: size(5);
+
+          li {
+            padding: size(5) size(10);
+            min-width: size(125);
+
+            color: #333;
+            font-size: 14px;
+            font-weight: normal;
+            transition: color 0.3s;
+            &:hover {
+              color: #fff;
+              background-color: rgb(177, 175, 175);
+            }
+          }
+        }
+      }
+    }
+  }

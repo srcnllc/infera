@@ -1,0 +1,58 @@
+  @import '../../styles/base/func';
+    .homePage {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      .background{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        video{
+          width:100%;
+        }
+      }
+      .toolbox{
+        position: absolute;
+        bottom: 5%;
+        left: 35%;
+        transform: translateX(-50%);
+        z-index: 999;
+      }
+      .rightCheck{
+        table {
+          width: 100%;
+          border-collapse: collapse;
+      
+          td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #ddd;
+      
+            &:first-child {
+              font-weight: bold;
+              color: #333;
+              width: 40%;
+            }
+      
+            &:last-child {
+              text-align: left;
+              color: #666;
+            }
+          }
+      
+          tr:last-child td {
+            border-bottom: none;
+          }
+        }
+      }
+
+
+
+
+      @media #{max-width()} {
+      }
+    }
+  

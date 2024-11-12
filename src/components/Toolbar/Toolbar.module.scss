@@ -1,0 +1,89 @@
+@import '../../styles/base/func';
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: size(24);
+    margin-top: size(20);
+    margin-left: size(20);
+  .searchToolbar {
+    width: max-content;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: size(10);
+    background-color: #fff;
+    border-radius: size(15);
+    position: relative;
+    .inputBar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        .searchIcon {
+            color: var(--black);
+            cursor: pointer;
+          }
+      
+          .searchInput {
+            width: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            transition: width 0.4s ease, padding 0.4s ease;
+            opacity: 0;
+            visibility: hidden; 
+          }
+          .open {
+              width: size(350);
+              opacity: 1;
+            visibility: visible; 
+            margin-right: size(10);
+          }
+      
+          .hasText {
+            padding-left: size(10);
+          }
+    }
+    .searchDetails {
+        width: size(376);
+        min-height: size(350);
+        background-color: rgb(177, 175, 175);
+        border-radius: size(10);
+        padding: size(10);
+        margin-top: size(5);
+        font-size: size(14);
+        color: #333;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        position: absolute;
+        top: size(35);
+        left: size(-10);
+    
+        p {
+          margin: 0;
+        }
+      }
+  }
+  .ActionBar{
+    display: flex;
+    gap: size(24);
+    z-index: 99999;
+
+    .subMenu {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0;
+        a {
+            padding: 5px;
+            color: #333;
+            text-decoration: none;
+            &:hover{
+                background-color: rgb(177, 175, 175);
+
+            }
+          }
+      }
+  }
+
+}
